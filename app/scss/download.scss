@@ -1,0 +1,53 @@
+.downloadInput {
+  width:100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left:-300px;
+  margin-top:-60px;
+  box-sizing: border-box;
+}
+
+.downloadInput-up {
+  width:100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left:-300px;
+  margin-top:0px;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  border-radius:8px;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0;
+  cursor: pointer;
+  width:5%;
+}
+
+.input-form input {
+	box-sizing: border-box;
+  display: inline-block;
+  float:left;
+  margin:0;
+  width: 40%;
+}
+
+.input-form button {
+  display:inline-block;
+	box-sizing: border-box;
+}
+
+.downloaded-img {
+  width:20%;
+  height:30%;
+	box-sizing: border-box;
+}

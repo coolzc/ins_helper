@@ -1,0 +1,8 @@
+assets/
+client/
+config/
+coverage/
+docker/
+node_modules/
+templates/
+views/
