@@ -13,30 +13,7 @@ export default class Download extends React.Component {
       insOriginalUrl: '',
       imageUrl: '',
     }
-  }
-
-  handleChange(event) {
-    let state = {}
-    state.insOriginalUrl = event.target.value
-    this.setState(state)
-  }
-
-  handleSubmit(values) {
-    const domain = ''
-    const insOriginalUrl = api.getInsPicUrl
-    const _this = this
-    const queryData = {
-      insOriginalUrl: this.state.insOriginalUrl
-    }
-    axios
-      .post(insOriginalUrl, queryData)
-      .then((res) => {
-        this.setState({imageUrl: res.data})
-        console.log(res)
-      })
-      .catch((err) => {
-        alert(err)
-      })
+    this.insImageUrl = this.insImageUrl.bind(this)
   }
 
   insImageUrl(url) {
@@ -45,11 +22,17 @@ export default class Download extends React.Component {
 
   render() {
     const insImageElement = <InsImage imageUrl={this.state.imageUrl}/>
-    return (
-      <div>
+    if(this.state.imageUrl === '') {
+      return (
+        <div className="downloadInput">
+          <InputForm insImageUrl={this.insImageUrl}/>
+        </div>)
+    } else {
+      return (<div className="downloadInput-up">
         <InputForm insImageUrl={this.insImageUrl}/>
         {this.state.imageUrl === '' ? null : insImageElement}
-      </div>
-    )
+      </div>)
+
+    }
   }
 }

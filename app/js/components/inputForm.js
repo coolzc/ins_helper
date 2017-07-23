@@ -2,6 +2,7 @@ import React from 'react'
 import '../../scss/download.scss'
 import 'bootstrap/scss/bootstrap.scss'
 import { api } from '../lib/api'
+import axios from 'axios'
 
 export default class InputForm extends React.Component{
  constructor(props) {
@@ -28,9 +29,8 @@ export default class InputForm extends React.Component{
     axios
       .post(insOriginalUrl, queryData)
       .then((res) => {
-        this.setState({imageUrl: res.data})
-        this.props.insImageUrl(res.data)
-        console.log(res)
+        _this.setState({imageUrl: res.data})
+        _this.props.insImageUrl(res.data)
       })
       .catch((err) => {
         alert(err)
@@ -38,21 +38,12 @@ export default class InputForm extends React.Component{
   }
 
   render() {
-    const element = <div className="input-form">
+      return (<div className="input-form">
         <h5>Download Instagram Photos and Videos!</h5>
         <input className="form-control" type="text" id="insPicInput" placeholder="Enter Instagram Picture Information" onChange={this.handleChange.bind(this)}/>
         <button className="button" onClick={this.handleSubmit.bind(this)}>Go</button>
-      </div>
+      </div>)
 
-    if(this.state.imageUrl === '') {
-     return (<div className="downloadInput">
-              {element}
-             </div>)
-    } else {
-      return (<div className="downloadInput-up">
-               {element}
-              </div>)
-    }
   }
 }
 

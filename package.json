@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "start": "node .",
+    "start": "sh build-app.sh && node .",
     "pretest": "eslint .",
     "posttest": "nsp check",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,7 +21,8 @@
     "loopback-component-explorer": "^2.4.0",
     "loopback-datasource-juggler": "^2.39.0",
     "pokemon-gif": "^1.0.9",
-    "serve-favicon": "^2.0.1"
+    "serve-favicon": "^2.0.1",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "@types/selenium-webdriver": "^2.44.26",
