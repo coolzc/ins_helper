@@ -1,6 +1,6 @@
 import React from 'react'
-import InputForm from './InputForm.js'
-import InsImage from './InsImage.js'
+import InputForm from './InputForm'
+import InsImage from './InsImage'
 import 'bootstrap/scss/bootstrap.scss'
 import '../../scss/download.scss'
 import { api } from '../lib/api'
