@@ -45,3 +45,5 @@ jspm_packages
 *.swp
 
 client/*
+*.jpg
+*.mp3

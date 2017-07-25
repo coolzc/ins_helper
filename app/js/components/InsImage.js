@@ -8,7 +8,9 @@ export default class InsImage extends React.Component {
 
   render() {
     return (<div className="downloaded-img">
-      <img src={this.props.imageUrl} className="img-fluid" alt="Responsive image"/>
+      <a href={this.props.imageUrl} title="Download Instagram Picture" download>
+        <img src={this.props.imageUrl} className="img-fluid" alt="Responsive image"/>
+      </a>
     </div>)
   }
 }
