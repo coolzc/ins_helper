@@ -1,0 +1,13 @@
+version: '2'
+services:
+  datacollection:
+    image: registry.us-west-1.aliyuncs.com/inshelper/inshelper:0.0.1
+    volumes:
+      - /var/log/inshelper:/var/log/inshelper
+    environment:
+      - NODE_ENV=production
+    networks:
+      - proxy
+      - backend
+    ports:
+      3000:80
