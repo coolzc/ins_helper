@@ -9,16 +9,13 @@ export default class Tutorial extends React.Component {
   render() {
     return (
       <div className="tutorial-background">
-        <img src="../images/tutorial-1.png" className="" alt="Responsive image"/>
-        <img src="../images/tutorial-2.png" className="" alt="Responsive image"/>
+        <h1>Please paste text as follows</h1>
+        <img src="../images/tutorial-1.jpg" className="tutorial" alt="Responsive image"/>
+        <img src="../images/tutorial-2.jpg" className="tutorial" alt="Responsive image"/>
 
-      <h5> we can get the url like: https://www.instagram.com/p/BSqJJ6HBYyA/?taken-by=stilsamt</h5>
-      <h4>Please paste text as follows</h4>
-      <ol>
-        <li>https://www.instagram.com/p/BSqJJ6HBYyA</li>
-        <li>BSqJJ6HBYyA</li>
-      </ol>
-
+        <p> we can get the url like: https://www.instagram.com/p/BSqJJ6HBYyA/?taken-by=stilsamt, just choose one to copy on Home Page input area</p>
+        <p>https://www.instagram.com/p/BSqJJ6HBYyA</p>
+        <p>BSqJJ6HBYyA</p>
       </div>
     )
   }
