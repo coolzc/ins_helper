@@ -1,8 +1,10 @@
-.backgroud {
+.background {
   background-image: url("../images/background.png");
-  height:100%;
   width: 100%;
-  background-position: center;
+  height: 100%;
+  margin:0px;
+  padding:0px;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;

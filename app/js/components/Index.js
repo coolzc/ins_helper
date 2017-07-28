@@ -1,8 +1,10 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import MainBody from './MainBody'
+import Home from './Home'
+import Tutorial from './Tutorial'
 import '../../scss/background.scss'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 export default class Index extends React.Component {
   constructor() {
@@ -11,11 +13,14 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <div className="backgroud">
+      <BrowserRouter>
+        <div>
           <Header />
-          <MainBody />
+            <Route exact path='/' component={Home}/>
+            <Route path='/tutorial' component={Tutorial}/>
           <Footer />
-      </div>
+        </div>
+      </BrowserRouter>
     )
   }
 }

@@ -10,18 +10,15 @@ li {
     float: left;
 }
 
-li a {
+a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #111;
+    text-decoration: none !important;
 }
 
 .active {
     background-color: #4CAF50;
+    font-weight: bold;
 }
