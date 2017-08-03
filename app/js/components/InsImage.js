@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../scss/ins-image.scss'
 
 export default class InsImage extends React.Component {
   constructor(props) {

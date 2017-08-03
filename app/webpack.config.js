@@ -2,6 +2,7 @@ const webpack = require('webpack')
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool:'cheap-module-eval-source-map',
@@ -47,7 +48,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html'
-    })
+    }),
+    new webpack.optimize.UglifyJsPlugin(),
+    new ExtractTextPlugin("[name]-[hash].css"),
     //new CopyWebpackPlugin([{
     //  from: './index.html',
     //  to: './'
